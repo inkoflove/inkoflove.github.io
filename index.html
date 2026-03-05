@@ -1,6 +1,4 @@
-
-
-<!DOCTYPE html>
+><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +16,10 @@
 
     <main>
         <h2>My Poems</h2>
+<div class="search-container">
+    <input type="text" id="poemSearch" placeholder="Search poems..." onkeyup="searchPoem()">
+</div>
+
 
         <fieldset>
             <legend><h3><b>Ice Princess</b></h3>
@@ -118,8 +120,38 @@
             </p>
         </fieldset>
     </main>
+    <script>
+function searchPoem() {
+    
+    let input = document.getElementById('poemSearch').value.toLowerCase();
+    
+  
+    let allPoems = document.querySelectorAll('fieldset');
+
+    allPoems.forEach(function(poem) {
+        
+        let titleTag = poem.querySelector('legend');
+        
+        if (titleTag) {
+            let titleText = titleTag.innerText.toLowerCase();
+            
+            
+            if (titleText.indexOf(input) > -1) {
+                poem.style.display = "";      
+            } else {
+                poem.style.display = "none";  
+            }
+        }
+    });
+}
+</script>
+
+
 
 </body>
 </html>
+
+
+
 
 
