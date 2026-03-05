@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink of Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+    <header>
+        <h1><b>Ink of Love</b></h1>
+        <p>I am an unprofessional passionate poet <strong>Jeet Mukherjee</strong>.<br>
+        <em>"She may never read but it won't stop me from writing even more."</em></p>
+    </header>
+
+    <main>
+        <h2>My Poems</h2>
+<div class="search-container">
+    <input type="text" id="poemSearch" placeholder="Search poems..." onkeyup="searchPoem()">
+</div>
+
+
+        <fieldset>
+            <legend><h3><b>Ice Princess</b></h3>
+</legend>
+            <p>
+                She walks in silence, with a calm demeanour.<br>
+                She wears ice like a gown,<br>
+                But with a smile like a crack in the glacier.<br>
+                Her eyes, crystal-sharp—her breath, like a blizzard.
+            </p>
+            <p>
+                Her beauty is elegant, untouchable, piercing.<br>
+                It pierces my heart<br>
+                And makes my love bleed<br>
+                Through every drop of blood.
+            </p>
+            <p>
+                I wish I could slip on the ice and fall in the crack,<br>
+                Reaching your heart and the love inside.<br>
+                Never ever going outside,<br>
+                Just lost there in peace.<br>
+                But… but would it ever happen outside my dream?
+            </p>
+            <p>
+                Maybe in another winter, I’ll find spring in you;<br>
+                Outside the dream… eventually.<br>
+                Or… will I?
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend><h3><b>The Wisest Fool</b>
+</h3></legend>
+            <p>
+                If my life is a dark room,<br>
+                then you are the only candle burning here,<br>
+                illuminating my heart with your flame.
+            </p>
+            <p>
+                If my life is a ship,<br>
+                then you are the only anchor holding me.
+            </p>
+            <p>
+                If my life is a desert,<br>
+                then you are the only oasis I’m chasing.
+            </p>
+            <p>
+                When the candle will be extinguished,<br>
+                When the anchor will break from rust,<br>
+                When the oasis will fade into a mirage,
+            </p>
+            <p>
+                I will fade into the darkness.<br>
+                I will be lost in the sea.<br>
+                I will be scattered into the sands of the desert.
+            </p>
+            <p>
+                You sculpted my soul.<br>
+                You created tides in my veins.<br>
+                You set a fire in my heart’s forest.<br>
+                I became the wisest fool ever lived.
+            </p>
+            <p>
+                You may never look back,<br>
+                But I shall keep walking your way.<br>
+                And if you ever did,<br>
+                You would see the crater you created unknowingly.<br>
+                And the fire burning in it.
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend><h3><b>Delusional</b></h3>
+</legend>
+            <p>
+                I know it's a delusion<br>
+                But I don't want to leave it<br>
+                I know it won't happen<br>
+                But I can't admit it<br>
+                I sip lies like fine wine<br>
+                Drinking poison that turns me blind<br>
+                It burns my throat<br>
+                While the truth is choked
+            </p>
+            <p>
+                Dreams made from shattered glass<br>
+                More broken than ruins of a building that<br> 
+                long ago collapsed<br>
+                Walking paths that never existed<br>
+                Building things that are already broken<br>
+                Lighting a fire from ashes<br>
+                Chasing hopes that are never meant to be met
+            </p>
+            <p>
+                Refusing to admit my hopes are fake<br>
+                Grieving for something<br>
+                That died before it could have lived
+            </p>
+        </fieldset>
+    </main>
+    <script>
+function searchPoem() {
+    
+    let input = document.getElementById('poemSearch').value.toLowerCase();
+    
+  
+    let allPoems = document.querySelectorAll('fieldset');
+
+    allPoems.forEach(function(poem) {
+        
+        let titleTag = poem.querySelector('legend');
+        
+        if (titleTag) {
+            let titleText = titleTag.innerText.toLowerCase();
+            
+            
+            if (titleText.indexOf(input) > -1) {
+                poem.style.display = "";      
+            } else {
+                poem.style.display = "none";  
+            }
+        }
+    });
+}
+</script>
+
+
+
+</body>
+</html>
+
+
